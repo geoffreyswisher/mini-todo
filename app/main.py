@@ -3,9 +3,6 @@ import sys
 from Stack import Stack
 
 
-
-
-
 def errorCheck(error):
 	retstr = 'Error: '
 
