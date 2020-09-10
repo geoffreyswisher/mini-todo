@@ -1,2 +1,2 @@
 name=$(whoami)
-python /home/$name/todolist/app/main.py /home/$name/todolist/list.txt $1 $2 $3
+python /home/$name/todolist/app/main.py /home/$name/todolist/list.txt "$1" $2 $3
