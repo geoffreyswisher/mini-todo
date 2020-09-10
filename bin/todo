@@ -1,2 +1,13 @@
 name=$(whoami)
-python /home/$name/todolist/app/main.py /home/$name/todolist/list.txt "$1" "$2" $3
+
+if !(test -z $3)
+then
+	python /home/$name/mini-todo/app/main.py /home/$name/mini-todo/list.txt "$1" "$2" "$3"
+
+elif !(test -z $2)
+then
+	python /home/$name/mini-todo/app/main.py /home/$name/mini-todo/list.txt "$1" "$2"
+
+else 
+	python /home/$name/mini-todo/app/main.py /home/$name/mini-todo/list.txt "$1"
+fi

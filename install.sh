@@ -13,4 +13,4 @@ fi
 sudo cp bin/todo /usr/bin/
 
 name=$(whoami)
-cp -r ./ /home/$name/todolist/
+cp -r ./ /home/$name/mini-todo/

@@ -102,9 +102,13 @@ def main():
 
 	args = sys.argv[2::]
 
-	if len(args) < 1:
+	if len(args) == 0:
+		display(stack, args)
+		return 0
+
+	if len(args) < 0:
 		print('Too few arguments.')
-		print('Usage is "$ todolist [action] [arguments]"')
+		print('Usage is "$ todo [action] [arguments]"')
 		print('Use action "help" to list actions and their arguments\n')
 		return -1
 
@@ -115,7 +119,7 @@ def main():
 	except Exception as e:
 		print(e)
 		print('Invalid command')
-		print('Usage is "$ todolist [action] [arguments]"')
+		print('Usage is "$ todo [action] [arguments]"')
 		print('Use action "help" to list actions and their arguments\n')
 
 	display(stack, args[1::])
@@ -123,11 +127,4 @@ def main():
 	save(stack, filepath)
 
 
-
-
 main()
-
-
-# Bash Script
-# 	check python
-#	mkdir /opt/user/todolist
