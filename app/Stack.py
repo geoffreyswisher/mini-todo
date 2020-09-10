@@ -15,7 +15,7 @@ class Stack:
 		if place > self.size:
 			raise Exception('Index Error', '>')
 			return -1
-		if place <= 0:
+		if place < 0:
 			raise Exception('Index Error', '<')
 			return -1
 
